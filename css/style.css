@@ -10,10 +10,6 @@ body {
   font-family: 'Titillium Web', sans-serif;
   font-size: 100%; }
 
-.main-headline {
-  font-size: 9.6em !important;
-  font-weight: bold; }
-
 .headline {
   font-size: 6.4em;
   font-weight: bold;
@@ -82,28 +78,34 @@ body {
   height: 16px; }
 
 @media only screen and (max-width: 100em) {
-  .arrow-right {
-    display: none; } }
-@media only screen and (max-width: 100em) {
-  .arrow-black, .arrow-up, .arrow-nav {
+  .arrow-black, .arrow-up, .arrow-nav, .arrow-right {
     display: none; }
 
-  .navbar h1 a {
-    width: 60px; }
+  .headline {
+    font-size: 5em; }
+
+  .margin-space {
+    margin: 0 0 !important; }
+
+  .navbar h1 {
+    margin-left: 3%; }
+
+  .margin-space {
+    margin: 0 auto; }
 
   .partners img {
     display: block;
     padding: 10%;
-    margin: 0 auto; }
-
-  h1.headline-partners {
-    padding: 10% 0; }
-
-  .margin-space {
     margin: 0 auto; } }
 @media only screen and (max-width: 50em) {
   .navbar-default .navbar-toggle {
-    padding: 6% 8% 0px 0px; } }
+    padding: 28px 9% 0px 0px; }
+
+  .navbar-toggle .icon-bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px; } }
 /*-------------HEADER-----------*/
 .navbar {
   height: 80px;
@@ -123,7 +125,6 @@ body {
 .navbar h1 a {
   display: inline-block;
   height: 48px;
-  margin: 1px 0 0 0;
   min-width: 224px;
   background: url("../assets/img/main-logo.png"); }
 
@@ -138,9 +139,6 @@ body {
   .navbar-default .navbar-nav li:hover {
     border-bottom: 5px solid #0bc7bc; }
 
-.navbar-default .navbar-nav li a {
-  font-size: 1.1em; }
-
 @media only screen and (max-width: 62.5rem) {
   .navbar-default .navbar-nav li {
     margin-right: 10px; }
@@ -149,22 +147,25 @@ body {
     .navbar-default .navbar-nav li:hover {
       background-color: none; } }
 @media only screen and (max-width: 47.937rem) {
+  .main-headline {
+    font-size: 7em !important; }
+
   .navbar-default .navbar-toggle {
     border-color: #fff; }
     .navbar-default .navbar-toggle.navbar-toggle:hover {
       background-color: #fff; }
 
   .navbar-right {
-    height: 800px;
-    background-color: #11d2c1;
-    opacity: .8;
+    height: 950px;
+    background-color: rgba(17, 212, 196, 0.8);
     margin: 4px 0; }
 
   .navbar-default .navbar-nav > li > a {
-    font-size: 2rem;
+    font-size: 2em;
     border-bottom: none;
     color: #fff;
-    z-index: 200; }
+    z-index: 200;
+    padding: 2% 3%; }
     .navbar-default .navbar-nav > li > a.navbar-default .navbar-nav > li:after {
       content: '';
       display: block;
@@ -187,13 +188,13 @@ body {
 
 .video h1.main-headline {
   z-index: 100;
-  font-size: 6rem;
+  font-size: 9.6em;
   letter-spacing: .3rem;
   font-weight: bold;
   color: #fff;
   position: absolute;
   left: 9%;
-  top: 40%; }
+  top: 38%; }
   .video h1.main-headline.main-headline:after {
     content: '';
     display: block;
@@ -285,21 +286,6 @@ body {
   font-size: 1.6em; }
 
 /*-------------ORGANIZERS-----------*/
-.tauron-img {
-  background: url("../assets/img/tauron-arena.png");
-  background-repeat: no-repeat;
-  height: 129px;
-  max-width: 100%;
-  margin-left: 20%; }
-
-.estimote-transparent {
-  background: url("../assets/img/estimote-transparent.png");
-  background-repeat: no-repeat;
-  height: 119px;
-  max-width: 100%;
-  margin-top: 28%;
-  margin-left: 20%; }
-
 /*-------------RULES-----------*/
 .rules .tabs-left li {
   float: none; }
@@ -379,6 +365,21 @@ body {
 .tabbable {
   margin-top: 10%; }
 
+.mobile {
+  display: none; }
+
+@media only screen and (max-width: 1000px) {
+  .tabs-left {
+    display: none; }
+
+  .mobile {
+    display: inline-block; } }
+@media only screen and (min-width: 1001px) {
+  .mobile {
+    display: none; }
+
+  .tabs-left {
+    display: inline-block; } }
 /*-------------PARTNERS-----------*/
 .partners {
   background-color: #f6f6f6; }
@@ -408,7 +409,8 @@ body {
   text-align: center; }
 .talk .feed-twitter .iframe-container {
   min-width: 180px;
-  width: 300px; }
+  width: 300px;
+  margin: 0 auto; }
 .talk .newsletter {
   text-align: center; }
 .talk .newsletter-form {
